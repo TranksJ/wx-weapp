@@ -1,0 +1,31 @@
+<view class="app">
+  <view class="empty" wx:if="{{value==0}}">
+    您的购物车空空如，也去逛逛吧~
+  </view>
+  <van-checkbox-group value="{{ result }}" bind:change="checkbox">
+  <view class="list" wx:for="{{list}}" wx:key="key" >
+    <view class="left">
+      <van-checkbox  name="{{item.id}}" custom-class="check" ></van-checkbox>
+    </view>
+    <view class="right">
+      <van-card 
+        price="{{item.price}}.00"
+        title="{{item.name}}"
+        thumb="{{item.imageUrl}}"
+        >
+      <view slot="footer" >
+        <van-stepper value="{{ item.num }}" data-id="{{item.id}}" bind:change="onStepper" />
+      </view>
+      </van-card>
+    </view>
+  </view>
+  </van-checkbox-group>
+  <van-submit-bar
+    price="{{ total}}"
+    button-text="提交订单"
+    bind:submit="onClickButton"
+    tip="{{ true }}"
+    >
+    <van-checkbox value="{{ checked }}" bind:change="onRadio">全选</van-checkbox>
+  </van-submit-bar>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "限时抢购",
+  "usingComponents": {
+    "mp-icon": "../../miniprogram_npm/weui-miniprogram/icon/icon"
+  }
+}

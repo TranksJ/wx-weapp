@@ -1,0 +1,81 @@
+.app{
+  width: 750rpx;
+  margin: 0;
+  padding: 0;
+  height: 1000px;
+}
+.swiper{
+  height: 332px;
+}
+.demo-text-1{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  height: 100%;
+  width:100%
+}
+.demo-text-2{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+.demo-text-3{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #353535;
+  font-size: 36rpx;
+}
+.swiperImg{
+  height: 100%;
+  width:100%
+}
+.conut{
+  width: 700rpx;
+  padding:  0 25rpx;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #666 
+}
+.title{
+  display: inline-block;
+  width: 400rpx;
+  font-size: 20px;
+}
+.more{
+  display: inline-block;
+  width: 300rpx;
+  text-align: right;
+}
+.body{
+  width: 750rpx;
+}
+.list{
+  padding: 5px 0;
+  width: 700rpx;
+  height: 150px;
+  border-bottom: 1px solid #666;
+}
+.listLeft{
+  display: inline-block;
+  height: 149px;
+  width: 450rpx;
+}
+.listLeft>view{
+  height: 40px;
+}
+.listRight{
+  float: right;
+  height: 149px;
+  width: 250rpx;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.listRight>image{
+  height: 149px;
+  width: 250rpx;
+}

@@ -1,0 +1,33 @@
+<view class="app">
+<van-cell-group>
+  <van-field
+    bind:blur="nameTap"
+    value="{{ username }}"
+    label="收货人"
+    placeholder="姓名"
+  />
+   <van-field
+    type="tel"
+    bind:blur="phoneTap"
+    value="{{ phone }}"
+    label="联系方式"
+    placeholder="手机号码"
+    border="{{ false }}"
+  />
+  </van-cell-group>
+  <view class="address">
+    <text>所在地区</text>
+    <picker mode="region" bindchange="bindPickerChange" value="{{region}}"  custom-item="{{customItem}}">
+      <view class="picker">{{region}}</view>
+    </picker>
+  </view>
+  <van-cell-group>
+  <van-field
+    bind:blur="addressTap"
+    value="{{ text }}"
+    label="详细地址"
+    placeholder="道路、门牌号、小区、单元室等"
+  />
+  </van-cell-group>
+  <a bindtap="btnTap" class="btn">保存并使用该地址</a>
+</view>

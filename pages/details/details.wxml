@@ -1,0 +1,164 @@
+<view class="app">
+<!-- 顶部轮播图 -->
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" >
+    <block wx:for="{{swiperList}}" wx:key="*this">
+          <swiper-item>
+              <image class="swiperImg" src="{{item}}"></image>
+          </swiper-item>
+    </block>   
+  </swiper>
+  <!-- 价格  秒杀  -->
+  <view class="describe">
+    <view class="price">
+      <text class="priceL">￥{{price}}</text>
+      <text class="priceR">.00</text>
+    </view>
+    <view class="endTime">
+      <text>距离结束还剩</text>
+      <text>20天 14:56:06</text>
+    </view>
+  </view>
+  <!-- 购物车弹出层 -->
+  <van-popup
+    closeable
+    position="bottom"
+    custom-style="height: 60%"
+    show="{{ cartshow }}"
+    bind:close="onClose">
+    <view class="cart">
+      <view class="cartHeader">
+        <view class="cartHeaderLeft">
+          <image src="{{swiperList[0]}}"></image>
+          <view class="cartPrice">
+            <view class="p">
+              <text class="cp">￥{{price}}</text>
+              <text>.00</text>
+            </view>
+            <view>
+              库存：989
+            </view>
+          </view>
+        </view>
+        <view class="cartHeaderRight">
+          <van-icon name="cross" bind:click="onClose" />
+        </view>
+      </view>
+      <view class="cartNum">
+        <text>数量</text><van-stepper custom-class="setnum" value="{{ 1 }}" bind:change="onChange" />
+      </view>
+      <a class="btn" bindtap="btn">加入购物车</a>
+    </view>
+  </van-popup>
+  <!-- 立即购买弹出层 -->
+  <van-popup
+    position="bottom"
+    closeable
+    round
+    close-icon-position="top-left"
+    custom-style="height: 60%"
+    show="{{ buyshow }}"
+    bind:close="buyClose">
+    <view class="cart">
+      <view class="cartHeader">
+        <view class="cartHeaderLeft">
+          <image src="{{swiperList[0]}}"></image>
+          <view class="cartPrice">
+            <view class="p">
+              <text class="cp">￥{{price}}</text>
+              <text>.00</text>
+            </view>
+            <view>
+              库存：989
+            </view>
+          </view>
+        </view>
+        <view class="cartHeaderRight">
+          <van-icon name="cross" bind:click="buyClose" />
+        </view>
+      </view>
+      <view class="cartNum">
+        <text>数量</text><van-stepper custom-class="setnum" value="{{ 1 }}" bind:change="onbuyste" />
+      </view>
+      <a class="btn" bindtap="next">下一步</a>
+    </view>
+    
+  </van-popup>
+  <!-- 评论 -->
+  <view class="comment">
+    <view class="commentTitle">
+      <view class="commentTitleLeft">评价
+        <text>46条</text>
+      </view>
+      <view class="commentTitleRight"><van-icon name="arrow" /></view>
+    </view>
+    <view class="commentList">
+      <view class="commentListHeader">
+        <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png"/>
+        <text class="name">会飞的鱼</text>
+        <view class="rate">
+          <van-rate
+          size="10"
+          readonly
+          value="{{ value }}"
+          bind:change="onChange"
+          />
+        </view>
+        <text>2020-5-03</text>
+      </view>
+      <view class="commentListBody">
+        <text>
+          非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好
+          常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好
+        </text>
+      </view>
+    </view>
+    <view class="commentList">
+      <view class="commentListHeader">
+        <van-icon name="https://b.yzcdn.cn/vant/icon-demo-1126.png"/>
+        <text class="name">会飞的鱼</text>
+        <view class="rate">
+          <van-rate
+          size="10"
+          readonly
+          value="{{ value }}"
+          bind:change="onChange"
+          />
+        </view>
+        <text>2020-5-03</text>
+      </view>
+      <view class="commentListBody">
+        <text>
+          非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好非常好
+        </text>
+      </view>
+    </view>
+  </view>
+  <!-- 详情 -->
+  <view class="detailsTitle">详情</view>
+  <image wx:for="{{detailsList}}" wx:key="*this" class="details" src="{{item}}"></image>
+  <!-- 底部导航 -->
+  <van-goods-action>
+    <van-goods-action-icon
+      wx:if="{{infoShow==true}}"
+      icon="cart-o"
+      info="{{info}}"
+      text="购物车"
+      bind:click="onClickIcon"
+    />
+    <van-goods-action-icon
+      wx:if="{{infoShow==false}}"
+      icon="cart-o"
+      text="购物车"
+      bind:click="onClickIcon"
+    />
+    <van-goods-action-button
+      text="加入购物车"
+      type="warning"
+      bind:click="cart"
+    />
+    <van-goods-action-button
+      text="立即购买"
+      bind:click="buy"
+    />
+  </van-goods-action>
+</view>

@@ -1,0 +1,33 @@
+.app{
+  width: 750rpx;
+  height: 100vh;
+  margin: 0;
+  padding:0;
+  background-color: rgb(242,242,242)
+}
+.header{
+  height: 9vh;
+  width: 750rpx;
+}
+.list{
+  width: 360rpx;
+  height: 44vh;
+  float: left;
+  margin: 7rpx;
+  border-radius: 25rpx;
+  background-color: white;
+  overflow: hidden;
+}
+.listP{
+  width: 360rpx;
+  height: 30vh;
+}
+.describe{
+  display: block;
+  width: 374rpx
+}
+.btn{
+  float: right;
+  margin-right: 10rpx;
+  margin-top: 4vh;
+}

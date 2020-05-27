@@ -1,0 +1,31 @@
+<view class="app">
+  <view class="header">
+    <view class="page" data-weui-theme="{{theme}}">
+      <view class="page__bd" style="height: 100%;">
+        <view class="weui-tab">
+          <view class="weui-navbar"> 
+            <view class="weui-navbar__item" bindtap="maskTap">
+            口罩
+            </view>
+            <view class="weui-navbar__item" bindtap="neckTap">
+            肩颈
+            </view>
+            <view class="weui-navbar__item" bindtap="kneepadTap">
+            护膝
+            </view>
+            <view class="weui-navbar__item" bindtap="waistTap">
+            护腰
+            </view>
+          </view>
+          <view class="weui-tab__panel">
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list" wx:for="{{productList}}" wx:key="*this" bindtap="listTap" data-index="{{index}}">
+    <image class="listP" src="{{item.imageUrl}}"></image>
+    <text class="describe">{{item.name}}----{{item.name}}</text>
+    <a class="weui-btn weui-btn_mini weui-btn_primary btn">购买</a>
+  </view>
+</view>

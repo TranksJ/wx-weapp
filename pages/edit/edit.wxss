@@ -1,0 +1,48 @@
+.app{
+  width:750rpx;
+  height: 100vh;
+}
+form{
+  display: block;
+  width:750rpx;
+  height: 100vh;
+}
+input{
+  display: inline-block
+}
+.input{
+  height: 8vh;
+  line-height: 8vh;
+}
+.address{
+  width: 696rpx;
+  padding: 0 27rpx;
+  height: 6vh;
+}
+.address>text{
+  display: inline-block;
+  line-height: 6vh;
+  font-size: 27rpx;
+  color: #666666;
+}
+picker{
+  display: inline-block;
+  width: 500rpx;
+}
+.picker{
+  font-size: 27rpx;
+  color: rgb(153,166,196);
+  margin-left: 66rpx;
+}
+.btn{
+  display: block;
+  width: 600rpx;
+  height: 6vh;
+  background-color: red;
+  margin-left: 75rpx;
+  margin-top: 6vh;
+  text-align: center;
+  line-height: 6vh;
+  border-radius: 45rpx;
+  color: white;
+}

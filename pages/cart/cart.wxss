@@ -1,0 +1,29 @@
+.app{
+  width: 750rpx;
+  height: 100vh;
+}
+.empty{
+  height: 70vh;
+  width: 750rpx;
+  font-size: 15px;
+  line-height: 70vh;
+  text-align: center;
+}
+.left{
+  width: 100rpx;
+  float: left;
+  line-height: 18vh;
+  height: 18vh;
+}
+.right{
+  width: 650rpx;
+  float: left;
+  height: 18vh;
+}
+.check{
+  padding-top: 5vh;
+  padding-left: 50rpx;
+}
+/* .stepper{
+  float: right;
+} */

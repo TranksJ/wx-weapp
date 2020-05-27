@@ -1,0 +1,16 @@
+<button bindtap="showPopup">ok</button>
+
+<van-popup
+   show="{{ show }}"
+    closeable
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose">
+  <view class="body">
+    <view class="top-left">
+    </view>
+    <view class="top-right">
+      <van-icon name="cross" />
+    </view>
+  </view>
+  </van-popup>

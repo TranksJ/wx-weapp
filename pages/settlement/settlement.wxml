@@ -1,0 +1,25 @@
+<view class="app">
+  <view class="header" bindtap="editbtn">
+    <view class="info">
+      <text class="name">{{name}}</text>
+      <text class="phone">{{phone}}</text>
+      <text class="address">{{address}}</text>
+    </view>
+    <mp-icon  type="field" icon="arrow" color="black" size="{{20}}"></mp-icon>
+  </view>
+  <view class="body">
+    <view class="commodityImg">
+      <image src="../../static/mask/1.jpg"></image>
+    </view>
+    <view class="commodityName">
+      <text>医用外科口罩</text>
+      <view class="stepper">
+        <text >￥{{tprice}}</text>
+      <van-stepper value="{{value}}" custom-class="c-custom-class" bind:change="onChange" />
+      </view>
+    </view>
+  </view>
+  <view  class="fooder">
+    <a bindtap="btn" class="btn">购买</a>
+  </view>
+</view>

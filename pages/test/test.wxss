@@ -1,0 +1,14 @@
+.body{
+  height: 100%;
+  width: 720rpx;
+  padding:10rpx 15rpx 0 15rpx;
+  background-color: aqua;
+}
+.top-left{
+  display: inline-block;
+  width: 500rpx;
+}
+.top-right{
+  float: right;
+  width: 20px;
+}

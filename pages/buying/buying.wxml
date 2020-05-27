@@ -1,0 +1,81 @@
+<view class="app">
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}"
+  interval="800" circular="true" >
+    <block wx:for="{{imagesUrl}}" wx:key="*this">
+          <swiper-item>
+              <image class="swiperImg" src="{{item}}" lazy-load="{{true}}"></image>
+          </swiper-item>
+    </block>   
+  </swiper>
+  <view class="conut">
+    <view class="header">
+      <text class="title">限时秒杀</text>
+      <view class="more">更多秒杀活动
+      <mp-icon  type="field" icon="arrow" color="black" size="{{18}}"></mp-icon>
+      </view>
+    </view>
+    <view class="body">
+      <view class="list" bindtap="maskTap">
+        <view class="listLeft">
+          <view>医用外科口罩秒杀10元/盒</view>
+          <view>距离结束</view>
+          <view>
+            <text>{{d}}天</text>
+            <text>{{h}}</text>:
+            <text>{{m}}</text>:
+            <text>{{s}}</text>
+          </view>
+        </view>
+        <view class="listRight">
+          <image mode="aspectFit" src="../../static/mask/1.jpg"></image>
+        </view>
+      </view>
+      <view class="list" bindtap="kneepadTap">
+        <view class="listLeft">
+          <view>丰寿堂护膝秒杀156元/个</view>
+          <view>距离结束</view>
+          <view>
+            <text>{{d}}天</text>
+            <text>{{h}}</text>:
+            <text>{{m}}</text>:
+            <text>{{s}}</text>
+          </view>
+        </view>
+        <view class="listRight">
+          <image mode="aspectFit" src="../../static/kneepad/1.jpg"></image>
+        </view>
+      </view>
+      <view class="list" bindtap="waistTap">
+        <view class="listLeft">
+          <view>丰寿堂护腰秒杀266元/个</view>
+          <view>距离结束</view>
+          <view>
+            <text>{{d}}天</text>
+            <text>{{h}}</text>:
+            <text>{{m}}</text>:
+            <text>{{s}}</text>
+          </view>
+        </view>
+        <view class="listRight">
+          <image mode="aspectFit" src="../../static/waist/1.jpg"></image>
+        </view>
+      </view>
+      <view class="list" bindtap="neckTap">
+        <view class="listLeft">
+          <view>丰寿堂肩颈132元/个</view>
+          <view>距离结束</view>
+          <view>
+            <text>{{d}}天</text>
+            <text>{{h}}</text>:
+            <text>{{m}}</text>:
+            <text>{{s}}</text>
+          </view>
+        </view>
+        <view class="listRight">
+          <image mode="aspectFit" src="../../static/neck/1.jpg"></image>
+        </view>
+      </view>
+    
+    </view>
+  </view>
+</view>
